@@ -19,14 +19,10 @@ int main() {
     scanf("%d",&a);
     printf("Enter second number: ");
     scanf("%d",&b);
-    int sum = a + b;
-    int diff = a - b;
-    int divi = a/b;
-    int mul = a*b;
-    printf("Sum: %d\n", sum);
-    printf("Difference: %d\n", diff);
-    printf("Division: %d\n", divi);
-    printf("Multiplication: %d\n", mul);
+    printf("Sum: %d\n", a + b);
+    printf("Difference: %d\n", a - b);
+    printf("Division: %d\n", a/b);
+    printf("Multiplication: %d\n", a*b);
    
     return 0;
 }
