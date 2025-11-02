@@ -1,33 +1,25 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    int n, target, i, first = -1, last = -1;
-    
-    printf("Enter number of elements: ");
-    scanf("%d", &n);
-    
-    int nums[n];
-    printf("Enter %d sorted elements: ", n);
-    for(i = 0; i < n; i++)
-        scanf("%d", &nums[i]);
-    
-    printf("Enter target element: ");
-    scanf("%d", &target);
-    
-    for(i = 0; i < n; i++) {
-        if(nums[i] == target) {
-            if(first == -1)
-                first = i;
-            last = i;
+    char str[100];
+    int i, j, k, len;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);  
+
+    len = strlen(str);
+
+    printf("\nAll substrings are:\n");
+
+    for(i = 0; i < len; i++) {
+        for(j = i; j < len; j++) {
+            for(k = i; k <= j; k++) {
+                printf("%c", str[k]);
+            }
+            printf("\n");
         }
     }
-    
-    if(first == -1)
-        printf("-1, -1\n");
-    else {
-        printf("First occurrence at index: %d\n", first);
-        printf("Last occurrence at index: %d\n", last);
-    }
-    
+
     return 0;
 }
