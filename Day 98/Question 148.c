@@ -1,56 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
-struct Date {
-    int day;
-    int month;
-    int year;
-};
-
-struct Employee {
+struct Student {
     char name[50];
-    int id;
-    struct Date joiningDate;
+    int roll_no;
+    int marks;
 };
 
 int main() {
-    struct Employee emp;
-    FILE *fp;
+    struct Student s1, s2;
 
-    printf("Enter Employee Name: ");
-    scanf("%s", emp.name);
+    printf("Enter Student1 details (Name Roll Marks): ");
+    scanf("%s %d %d", s1.name, &s1.roll_no, &s1.marks);
 
-    printf("Enter Employee ID: ");
-    scanf("%d", &emp.id);
+    printf("Enter Student2 details (Name Roll Marks): ");
+    scanf("%s %d %d", s2.name, &s2.roll_no, &s2.marks);
 
-    printf("Enter Joining Date (day month year): ");
-    scanf("%d %d %d", &emp.joiningDate.day, &emp.joiningDate.month, &emp.joiningDate.year);
-
-    fp = fopen("employee.dat", "wb");
-    if (fp == NULL) {
-        printf("Error opening file for writing!\n");
-        return 1;
+    if (strcmp(s1.name, s2.name) == 0 && s1.roll_no == s2.roll_no && s1.marks == s2.marks) {
+        printf("Same\n");
+    } else {
+        printf("Different\n");
     }
-    fwrite(&emp, sizeof(struct Employee), 1, fp);
-    fclose(fp);
-    printf("Employee data saved to employee.dat\n");
-
-    fp = fopen("employee.dat", "rb");
-    if (fp == NULL) {
-        printf("Error opening file for reading!\n");
-        return 1;
-    }
-
-    struct Employee empRead;
-    fread(&empRead, sizeof(struct Employee), 1, fp);
-    fclose(fp);
-
-    printf("Read from file:\n");
-    printf("Name: %s | ID: %d | Joining Date: %02d/%02d/%04d\n",
-           empRead.name, empRead.id,
-           empRead.joiningDate.day,
-           empRead.joiningDate.month,
-           empRead.joiningDate.year);
 
     return 0;
 }
