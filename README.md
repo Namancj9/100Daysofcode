@@ -56,7 +56,6 @@ This repository is primarily for personal practice. Feel free to:
 ## 📄 License
 
 This project is open-source.  
-```
 
 Happy coding! 🖥️💻  
 Follow my journey as I solve **100 C programming challenges in 100 days**.
