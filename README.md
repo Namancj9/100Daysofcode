@@ -4,9 +4,9 @@ Welcome to my **100 Days of Code** journey! This repository contains solutions t
 
 ## 📌 About
 
-- **Language**: C  
-- Focus: Problem-solving and algorithm implementation  
-- Purpose: Improve coding skills, learn new concepts, and build a strong foundation in C programming.  
+- **Language:** C  
+- **Focus:** Problem-solving and algorithm implementation  
+- **Purpose:** Improve coding skills, learn new concepts, and build a strong foundation in C programming.  
 
 Each day, a new problem is solved and added to this repository with a clear solution.
 
@@ -56,7 +56,7 @@ This repository is primarily for personal practice. Feel free to:
 ## 📄 License
 
 This project is open-source.  
-
+```
 
 Happy coding! 🖥️💻  
-Follow my journey as I solve 100 C programming challenges in 100 days.
+Follow my journey as I solve **100 C programming challenges in 100 days**.
