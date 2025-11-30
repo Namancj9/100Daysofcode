@@ -4,7 +4,7 @@ Welcome to my **100 Days of Code** journey! This repository contains solutions t
 
 ## 📌 About
 
-- Language: C  
+- **Language**: C  
 - Focus: Problem-solving and algorithm implementation  
 - Purpose: Improve coding skills, learn new concepts, and build a strong foundation in C programming.  
 
